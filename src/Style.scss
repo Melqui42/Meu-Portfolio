@@ -1,0 +1,908 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&display=swap");
+
+* {
+  margin: 0%;
+  padding: 0%;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1c1c22;
+
+  &::-webkit-scrollbar {
+    background-color: #545454;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #898989;
+  }
+}
+
+.App {
+  header {
+    height: 80px;
+
+    .NavContainer {
+      z-index: 1;
+      width: 100vw;
+      position: fixed;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      background-color: #1c1c22;
+
+      .Content {
+        width: 80%;
+        height: 80px;
+        display: flex;
+        align-items: center;
+        background-color: #1c1c22;
+        justify-content: space-between;
+
+        .Logo {
+          gap: 1rem;
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 42px;
+          }
+
+          div {
+            h1 {
+              color: white;
+              font-family: "Roboto Mono", monospace;
+            }
+
+            p {
+              color: #9897a0;
+            }
+          }
+        }
+
+        menu {
+          display: flex;
+          align-items: center;
+
+          .ShowList {
+            gap: 2rem;
+            display: flex;
+            align-items: center;
+
+            .Item {
+              a {
+                color: white;
+                transition: 0.3s;
+                padding: 1rem 0rem 1rem 0rem;
+                border-bottom: 3px solid transparent;
+
+                &:hover {
+                  border-bottom: 3px solid #6f73c6;
+                }
+              }
+            }
+          }
+
+          .HideList {
+            @extend .ShowList;
+          }
+
+          button {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            font-size: 2rem;
+            color: #6f73c6;
+            background-color: transparent;
+          }
+        }
+      }
+
+      .ShowOthers {
+        height: 50px;
+        width: 100%;
+        display: flex;
+        opacity: 1;
+        transition: 0.3s;
+        align-items: center;
+        justify-content: center;
+        background-color: #12a87e;
+
+        .Center {
+          width: 80%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          p {
+            gap: 1rem;
+            display: flex;
+            color: white;
+            margin-left: 30rem;
+            align-items: center;
+          }
+
+          button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2rem;
+            padding: 0.4rem;
+            border-radius: 100%;
+            color: white;
+            background-color: #10936e;
+          }
+        }
+      }
+
+      .HideOthers {
+        @extend .ShowOthers;
+        opacity: 0;
+        display: none;
+      }
+    }
+
+    @media (min-width: 320px) and (max-width: 1024px) {
+      .NavContainer {
+        .Content {
+          z-index: 1;
+          position: relative;
+
+          .Logo {
+            img {
+              width: 21px;
+            }
+
+            div {
+              h1 {
+                font-size: 1rem;
+              }
+            }
+          }
+
+          menu {
+            .ShowList {
+              top: 80px;
+              right: -12.5%;
+              width: 100vw;
+              opacity: 1;
+              transition: 0.3s;
+              position: absolute;
+              flex-direction: column;
+              border-top: 1px solid #4f4f4f;
+              border-bottom: 1px solid #4f4f4f;
+              background-color: #212429;
+              padding: 1rem 0rem 1.5rem 0rem;
+            }
+
+            .HideList {
+              @extend .ShowList;
+              top: 75px;
+              opacity: 0;
+            }
+
+            button {
+              display: flex;
+            }
+          }
+        }
+
+        .ShowOthers {
+          .Center {
+            gap: 2rem;
+
+            p {
+              gap: 0rem;
+              margin-left: 0rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .SectionHome {
+    width: 98.9vw;
+    height: 640px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .Center {
+      width: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      article {
+        gap: 1rem;
+        display: flex;
+        flex-direction: column;
+
+        span {
+          width: 145px;
+          color: white;
+          font-size: 0.8rem;
+          border-radius: 0.2rem;
+          padding: 0.5rem 1.5rem;
+          background-color: #029ff9;
+        }
+
+        h1 {
+          color: white;
+          font-size: 3.5rem;
+        }
+
+        p {
+          width: 500px;
+          color: #9897a0;
+          line-height: 1.5rem;
+        }
+
+        .List {
+          gap: 1rem;
+          display: flex;
+          margin-top: 1rem;
+          position: relative;
+          align-content: center;
+
+          .Item {
+            button {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border: none;
+              cursor: pointer;
+              color: white;
+              font-size: 1.2rem;
+              transition: 0.3s;
+              border-radius: 0.2rem;
+            }
+
+            .DownloadCV {
+              @extend button;
+              gap: 1rem;
+              width: 220px;
+              padding: 1rem 1.5rem;
+              background-color: #6f73c6;
+
+              .Icon {
+                padding: 0.5rem;
+                border-radius: 0.2rem;
+                background-color: #6165a9;
+              }
+
+              &:hover {
+                background-color: #6165a9;
+              }
+            }
+
+            .ButtonDropDown {
+              @extend button;
+              padding: 0.5rem;
+              margin-top: 1rem;
+              background-color: #c66f6f;
+
+              &:hover {
+                background-color: #a96161;
+              }
+            }
+
+            .HideDropDownList {
+              top: 20px;
+              left: 300px;
+              gap: 1rem;
+              display: flex;
+              transition: 0.3s;
+              position: absolute;
+              align-items: center;
+              opacity: 0;
+
+              .Item {
+                a {
+                  cursor: pointer;
+                  font-size: 1.5rem;
+                  padding: 0.2rem;
+                  display: flex;
+                  align-items: center;
+                  border-radius: 0.2rem;
+                  justify-content: center;
+                }
+
+                &:nth-child(1) a {
+                  color: #029ff9;
+                  background-color: white;
+                }
+
+                &:nth-child(2) a {
+                  color: white;
+                  background-color: #3a3c3d;
+                }
+
+                &:nth-child(3) a {
+                  color: white;
+                  background-color: #10936e;
+                }
+              }
+            }
+
+            .ShowDropDownList {
+              @extend .HideDropDownList;
+              left: 310px;
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      img {
+        width: 400px;
+        border-radius: 2rem;
+      }
+    }
+
+    @media (min-width: 320px) and (max-width: 768px) {
+      height: 785px;
+
+      .Center {
+        height: 90%;
+        flex-direction: column-reverse;
+
+        article {
+          h1 {
+            font-size: 2rem;
+          }
+
+          p {
+            width: 200px;
+          }
+
+          .List {
+            .Item {
+              .ButtonDropDown {
+                transform: rotate(-90deg);
+              }
+
+              .HideDropDownList {
+                top: -80px;
+                left: 192px;
+                transform: rotate(-90deg);
+
+                .Item {
+                  a {
+                    transform: rotate(90deg);
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        img {
+          width: 200px;
+        }
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+      height: 485px;
+
+      .Center {
+        article {
+          h1 {
+            font-size: 2rem;
+          }
+
+          p {
+            width: 300px;
+          }
+        }
+
+        img {
+          width: 280px;
+        }
+      }
+    }
+  }
+
+  .SectionAboutMe {
+    width: 98.9vw;
+    height: 640px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .Center {
+      gap: 4rem;
+      width: 80%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      .Title {
+        text-align: center;
+        h1 {
+          color: white;
+          font-size: 2.5rem;
+        }
+
+        p {
+          color: #9897a0;
+          line-height: 1.5rem;
+        }
+      }
+
+      article {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        .Others {
+          gap: 1rem;
+          display: flex;
+          flex-direction: column;
+
+          .FirstContent {
+            h1 {
+              color: white;
+              font-size: 1.5rem;
+            }
+
+            .List {
+              gap: 1rem;
+              display: flex;
+              align-items: center;
+              margin-top: 0.5rem;
+              margin-bottom: 1rem;
+
+              .Item {
+                a {
+                  cursor: pointer;
+                  font-size: 1.5rem;
+                  padding: 0.2rem;
+                  display: flex;
+                  align-items: center;
+                  border-radius: 0.2rem;
+                  justify-content: center;
+                }
+
+                &:nth-child(1) a {
+                  color: #029ff9;
+                  background-color: white;
+                }
+
+                &:nth-child(2) a {
+                  color: white;
+                  background-color: #3a3c3d;
+                }
+
+                &:nth-child(3) a {
+                  color: white;
+                  background-color: #10936e;
+                }
+              }
+            }
+
+            button {
+              gap: 1rem;
+              width: 290px;
+              display: flex;
+              margin-top: 0.5rem;
+              align-items: center;
+              justify-content: center;
+              border: none;
+              cursor: pointer;
+              color: white;
+              font-size: 1rem;
+              transition: 0.3s;
+              border-radius: 0.2rem;
+              padding: 0.5rem;
+              background-color: #6f73c6;
+
+              .Icon {
+                padding: 0.5rem;
+                border-radius: 0.2rem;
+                background-color: #6165a9;
+              }
+
+              &:hover {
+                background-color: #6165a9;
+              }
+            }
+
+            p {
+              color: #9897a0;
+            }
+          }
+
+          .SecondContent {
+            h1 {
+              color: white;
+              font-size: 1.5rem;
+            }
+
+            p {
+              color: #9897a0;
+              font-style: italic;
+            }
+          }
+        }
+
+        .Content {
+          gap: 1rem;
+          display: flex;
+          flex-direction: column;
+
+          .List {
+            display: grid;
+            grid-gap: 1rem;
+            place-items: center;
+            grid-template-columns: 155px 155px 155px;
+
+            .Item {
+              div {
+                width: 140px;
+                color: white;
+                padding: 0.5rem;
+                text-align: center;
+                border-radius: 0.2rem;
+                background-color: #212429;
+                border: 1px solid #4f4f4f;
+
+                p {
+                  color: #9897a0;
+                }
+              }
+            }
+          }
+
+          .Text {
+            width: 500px;
+            color: #9897a0;
+          }
+        }
+      }
+    }
+
+    @media (min-width: 320px) and (max-width: 1024px) {
+      height: 1230px;
+
+      .Center {
+        article {
+          gap: 2rem;
+          flex-direction: column;
+
+          .Others {
+            .FirstContent {
+              button {
+                width: 256px;
+              }
+            }
+          }
+
+          .Content {
+            text-align: center;
+            align-items: center;
+
+            .List {
+              grid-template-columns: 155px;
+            }
+
+            .Text {
+              width: 250px;
+            }
+          }
+        }
+      }
+    }
+
+    @media (min-width: 425px) and (max-width: 1024px) {
+      height: 1010px;
+
+      .Center {
+        article {
+          align-items: center;
+          .Content {
+            .List {
+              grid-template-columns: 155px 155px;
+            }
+
+            .Text {
+              width: 335px;
+            }
+          }
+        }
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+      height: 840px;
+
+      .Center {
+        article {
+          align-items: center;
+          .Content {
+            .List {
+              grid-template-columns: 155px 155px 155px;
+            }
+
+            .Text {
+              width: 400px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .SectionSkills {
+    width: 98.9vw;
+    height: 810px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .Center {
+      gap: 4rem;
+      width: 80%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      .Title {
+        text-align: center;
+        h1 {
+          color: white;
+          font-size: 2.5rem;
+        }
+
+        p {
+          color: #9897a0;
+          line-height: 1.5rem;
+        }
+      }
+
+      article {
+        .List {
+          display: grid;
+          grid-gap: 2rem;
+          place-items: center;
+          grid-template-columns: 370px 370px 370px;
+
+          .Item {
+            div {
+              gap: 1rem;
+              width: 290px;
+              height: 210px;
+              display: flex;
+              text-align: center;
+              align-items: center;
+              flex-direction: column;
+              justify-content: center;
+              padding: 2rem;
+              border-radius: 0.2rem;
+              border: 1px solid #4f4f4f;
+              background-color: #212429;
+
+              img {
+                width: 55px;
+              }
+
+              h1 {
+                color: white;
+                font-size: 1.5rem;
+              }
+
+              p {
+                color: #9897a0;
+              }
+            }
+
+            &:nth-child(2) div img {
+              width: 80px;
+            }
+
+            &:nth-child(6) div img {
+              width: 80px;
+            }
+          }
+        }
+      }
+    }
+
+    @media (min-width: 320px) and (max-width: 1024px) {
+      height: 2160px;
+
+      .Center {
+        article {
+          .List {
+            grid-template-columns: 190px;
+
+            .Item {
+              div {
+                width: 190px;
+                height: 230px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+      height: 1170px;
+
+      .Center {
+        article {
+          .List {
+            grid-template-columns: 255px 255px;
+
+            .Item {
+              div {
+                width: 190px;
+                height: 230px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media (min-width: 1024px) and (max-width: 1240px) {
+      height: 850px;
+
+      .Center {
+        article {
+          .List {
+            grid-template-columns: 255px 255px 255px;
+
+            .Item {
+              div {
+                width: 190px;
+                height: 230px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .SectionProjects {
+    width: 98.9vw;
+    height: 530px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .Center {
+      gap: 4rem;
+      width: 80%;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      .Title {
+        text-align: center;
+        h1 {
+          color: white;
+          font-size: 2.5rem;
+        }
+
+        p {
+          color: #9897a0;
+          line-height: 1.5rem;
+        }
+      }
+
+      article {
+        .List {
+          display: grid;
+          grid-gap: 2rem;
+          place-items: center;
+          grid-template-columns: 300px 300px 300px;
+
+          .Item {
+            a {
+              .Card {
+                width: 300px;
+                height: 300px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: space-around;
+                border-radius: 0.2rem;
+                background-color: #212429;
+                border: 1px solid #4f4f4f;
+
+                img {
+                  width: 270px;
+                  height: 150px;
+                  border-radius: 0.2rem;
+                  border: 1px solid #4f4f4f;
+                }
+
+                div {
+                  gap: 0.5rem;
+                  display: flex;
+                  text-align: center;
+                  align-items: center;
+                  flex-direction: column;
+
+                  h1 {
+                    color: white;
+                  }
+
+                  p {
+                    width: 250px;
+                    color: #9897a0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media (min-width: 320px) and (max-width: 1024px) {
+      height: 1240px;
+
+      .Center {
+        article {
+          .List {
+            grid-template-columns: 230px;
+
+            .Item {
+              a {
+                .Card {
+                  width: 260px;
+                  height: 300px;
+
+                  img {
+                    width: 230px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+      height: 860px;
+      
+      .Center {
+        article {
+          .List {
+            grid-template-columns: 280px 280px;
+
+            .Item {
+              a {
+                .Card {
+                  width: 280px;
+                  height: 300px;
+
+                  img {
+                    width: 230px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
