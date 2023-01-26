@@ -86,9 +86,9 @@ export default function App() {
             </p>
             <ul className="List">
               <li className="Item">
-                <button className="DownloadCV">
+                <a className="DownloadCV" href="https://drive.google.com/file/d/1ZQZzVsgOP5L68S-cie03jhZgR2X0F6-T/view?usp=share_link" target="_blank">
                   Download CV <AiOutlineDownload className="Icon" />
-                </button>
+                </a>
               </li>
               <li className="Item">
                 <button
