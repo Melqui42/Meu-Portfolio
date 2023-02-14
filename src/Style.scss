@@ -25,6 +25,8 @@ body {
 }
 
 .App {
+  width: 100%;
+
   header {
     height: 80px;
 
@@ -189,6 +191,7 @@ body {
               @extend .ShowList;
               top: 75px;
               opacity: 0;
+              visibility: hidden;
             }
 
             button {
@@ -212,7 +215,7 @@ body {
   }
 
   .SectionHome {
-    width: 98.9vw;
+    width: 100%;
     height: 640px;
     display: flex;
     align-items: center;
@@ -299,12 +302,13 @@ body {
             }
 
             .HideDropDownList {
-              top: 20px;
-              left: 300px;
+              top: 18px;
+              left: 325px;
               gap: 1rem;
               display: flex;
               transition: 0.3s;
               position: absolute;
+              visibility: hidden;
               align-items: center;
               opacity: 0;
 
@@ -338,8 +342,9 @@ body {
 
             .ShowDropDownList {
               @extend .HideDropDownList;
-              left: 310px;
+              left: 330px;
               opacity: 1;
+              visibility: visible;
             }
           }
         }
@@ -416,7 +421,7 @@ body {
   }
 
   .SectionAboutMe {
-    width: 98.9vw;
+    width: 100%;
     height: 640px;
     display: flex;
     align-items: center;
@@ -646,7 +651,7 @@ body {
   }
 
   .SectionSkills {
-    width: 98.9vw;
+    width: 100%;
     height: 810px;
     display: flex;
     align-items: center;
@@ -779,8 +784,8 @@ body {
   }
 
   .SectionProjects {
-    width: 98.9vw;
-    height: 530px;
+    width: 100%;
+    height: 1205px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -856,7 +861,7 @@ body {
     }
 
     @media (min-width: 320px) and (max-width: 1024px) {
-      height: 1240px;
+      height: 2530px;
 
       .Center {
         article {
@@ -881,7 +886,7 @@ body {
     }
 
     @media (min-width: 768px) and (max-width: 1024px) {
-      height: 860px;
+      height: 1530px;
       
       .Center {
         article {

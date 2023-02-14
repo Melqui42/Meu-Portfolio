@@ -6,8 +6,13 @@ import Sass_Icone from "./Assets/Sass_Icone.png";
 import MySQL_Icone from "./Assets/MySQL.png";
 
 import ToDoList from "./Assets/ToDoList.png";
+import ReprodutorDeMusica from "./Assets/ReprodutorDeMusica.png";
+import TelaDeLoginECadastro from "./Assets/TelaDeLoginECadastro.png";
+import PortfolioAntigo from "./Assets/PortfolioAntigo.png";
 import BuscadorDeCep from "./Assets/BuscadorDeCep.png";
 import ControleDeFinancas from "./Assets/ControleDeFinanças.png";
+import VerificadorDeIdade from "./Assets/VerificadorDeIdade.png";
+
 
 import {
   AiFillLinkedin,
@@ -49,22 +54,50 @@ export const projetos = [
     id: 1,
     img: ControleDeFinancas,
     title: "Controle de finanças",
-    text: "Projeto desenvolvido em ReactJS, Sass e LocalStorage. (sem uso de frameworks)",
+    text: "Projeto desenvolvido em ReactJS, Sass e LocalStorage. (sem uso de frameworks).",
     link: "https://github.com/Melqui42/Controle-Financeiro",
   },
   {
     id: 2,
     img: BuscadorDeCep,
     title: "Buscador de CEP",
-    text: "Projeto desenvolvido em ReactJS, Sass e Axios",
+    text: "Projeto desenvolvido em ReactJS, Sass e Axios.",
     link: "https://github.com/Melqui42/Buscador-de-CEP",
   },
   {
     id: 3,
     img: ToDoList,
     title: "Lista de Tarefas",
-    text: "Projeto desenvolvido em ReactJS, Sass (sem uso de frameworks)",
+    text: "Projeto desenvolvido em ReactJS, Sass (sem uso de frameworks).",
     link: "https://github.com/Melqui42/To-do-List",
+  },
+  {
+    id: 4,
+    img: VerificadorDeIdade,
+    title: "Verificador de idade",
+    text: "Projeto desenvolvido em ReactJS, Sass (sem uso de frameworks).",
+    link: "https://github.com/Melqui42/Verificador-de-Idade",
+  },
+  {
+    id: 5,
+    img: PortfolioAntigo,
+    title: "Portfolio Antigo",
+    text: "Projeto desenvolvido em ReactJS, Sass (sem uso de frameworks).",
+    link: "https://github.com/Melqui42/Meu-Portfolio-Antigo",
+  },
+  {
+    id: 6,
+    img: TelaDeLoginECadastro,
+    title: "Tela de Login e Cadastro",
+    text: "Projeto desenvolvido em ReactJS, Sass e uma API criada por mim.",
+    link: "https://github.com/Melqui42/Tela-de-Login-e-Cadastro-com-uso-de-API",
+  },
+  {
+    id: 7,
+    img: ReprodutorDeMusica,
+    title: "Reprodutor de Música",
+    text: "Projeto desenvolvido em ReactJS, Sass (sem uso de frameworks).",
+    link: "https://github.com/Melqui42/Reprodutor-de-musica-basico",
   },
 ];
 
