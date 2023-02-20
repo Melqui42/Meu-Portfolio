@@ -6,6 +6,7 @@ import Sass_Icone from "./Assets/Sass_Icone.png";
 import MySQL_Icone from "./Assets/MySQL.png";
 
 import ToDoList from "./Assets/ToDoList.png";
+import WeatherApp from "./Assets/WeatherApp.png";
 import ReprodutorDeMusica from "./Assets/ReprodutorDeMusica.png";
 import TelaDeLoginECadastro from "./Assets/TelaDeLoginECadastro.png";
 import PortfolioAntigo from "./Assets/PortfolioAntigo.png";
@@ -98,6 +99,13 @@ export const projetos = [
     title: "Reprodutor de Música",
     text: "Projeto desenvolvido em ReactJS, Sass (sem uso de frameworks).",
     link: "https://github.com/Melqui42/Reprodutor-de-musica-basico",
+  },
+  {
+    id: 8,
+    img: WeatherApp,
+    title: "Weather App",
+    text: "Projeto desenvolvido em ReactJS, Sass, OpenWeatherMap API, Axios",
+    link: "https://github.com/Melqui42/Weather-App",
   },
 ];
 
